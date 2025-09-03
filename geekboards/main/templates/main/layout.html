@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <div class="header">
+        <div class="site-top">
+        </div>
+        <div class="site-header-inner">
+            <a href="{% url 'devices_list_url' %}"><img src="{% static 'main/img/geekboards.svg' %}" alt="geekboards"></a>
+            <form method="post" action="{% url 'devices_list_url' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input name="search_text" type="text", placeholder="Поиск" value="{{ search_text }}" >
+                <input type="submit" value="Найти">
+            </form>
+        </div>
+    </div>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div class="footer">
+    </div>
+</body>
+</html>

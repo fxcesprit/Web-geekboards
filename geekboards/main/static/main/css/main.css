@@ -1,0 +1,50 @@
+*, *::before, *::after{box-sizing: border-box;}
+
+body{
+    margin: 0;
+    background-color: #f00;
+}
+
+ul {
+    margin: 0;
+    padding: 2rem;
+}
+
+li {
+    list-style: none;
+}
+
+.site-top{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px), linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 2rem 1rem;
+    background-color: #B4B5DF;
+    background-color: #DDDCED; 
+    height: 2.75rem;
+}
+
+.site-header-inner{
+    padding: 1rem;
+    max-height: 4rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+.site-header-inner img {
+    height: 2rem;
+}
+.site-header-inner form {
+    margin-left: auto;
+}
+.site-header-inner input {
+    height: 2rem;
+}
+
+.content{
+    background-color: #EEEBE7;
+    height: 642px;
+}
+
+.footer{
+    background-color: #171A1C;
+    height: 612px;
+}

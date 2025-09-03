@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Клавиатуры{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for device in devices %}
+        <li><a href="{% url 'device_info_url' device.id %}">{{ device }}</a> </li>
+        {% empty %}
+        <li>Список пуст</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
